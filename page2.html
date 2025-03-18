@@ -113,10 +113,29 @@
                 </div>
             </div>
         </div>
+        
+        
         <audio id="myAudio">
             <source src="./ST.mp3" type="audio/mp3">
+            <source src="./ghemoi.mp3" type="audio/mp3">
             Trình duyệt của bạn không hỗ trợ thẻ audio.
         </audio>
+
+        <script>
+            let songs = ["./ST.mp3", "./ghemoi.mp4"]; // Danh sách bài hát
+            let currentSong = 0;
+            let audio = document.getElementById("myAudio");
+
+            function playNextAudio() {
+                currentSong = (currentSong + 1) % songs.length; // Chuyển bài hát tiếp theo
+                audio.src = songs[currentSong]; // Cập nhật nguồn bài hát
+                audio.play(); // Phát bài hát
+            }
+
+            audio.addEventListener("ended", playNextAudio);
+        </script>
+
+
     
     </div>
     <script src="./script.js"></script>

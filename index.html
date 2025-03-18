@@ -328,6 +328,8 @@
                 audio.src = songs[currentSong]; // Cập nhật nguồn bài hát
                 audio.play(); // Phát bài hát
             }
+
+            audio.addEventListener("ended", playNextAudio);
         </script>
 
     </div>

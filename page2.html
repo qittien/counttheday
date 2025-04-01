@@ -115,14 +115,13 @@
         </div>
         
         
-        <audio id="myAudio">
-            <source src="./ST.mp3" type="audio/mp3">
-            <source src="./ghemoi.mp3" type="audio/mp3">
+        <audio id="myAudio" >
+            <source id="audioSource" src="music/ST.mp3" type="audio/mp3">
             Trình duyệt của bạn không hỗ trợ thẻ audio.
         </audio>
 
         <script>
-            let songs = ["./ST.mp3", "./ghemoi.mp4"]; // Danh sách bài hát
+            let songs = ["music/ghemoi.mp4", "music/bacbling.mp4", "music/ST.mp3" ]; // Danh sách bài hát
             let currentSong = 0;
             let audio = document.getElementById("myAudio");
 
@@ -134,6 +133,7 @@
 
             audio.addEventListener("ended", playNextAudio);
         </script>
+
 
 
     

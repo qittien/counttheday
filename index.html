@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>qtny</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="anh.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="pictures/anh.jpg">
 
     <style>
         html,
@@ -279,11 +279,11 @@
 <body onclick="playNextAudio()">
     <canvas id="c" width="948" height="586"></canvas>
     <div id="wrapper">
-        <h1>Đếm ngày yêu nhau</h1>
+        <h1>Mình đã bên nhau</h1>
 
         <div id="info">
             <div class="one">
-                <img src="anh1.jpg" class="avt">
+                <img src="pictures/anh1.jpg" class="avt">
                 <p>qt</p>
             </div>
             <div id="heart">
@@ -292,8 +292,7 @@
                 <b>Ngày rùi nè..</b>
             </div>
             <div class="two">
-                <img src="anh2.jpg"
-                    class="avt">
+                <img src="pictures/anh2.jpg" class="avt">
                 <p>ny</p>
             </div>
         </div>
@@ -309,17 +308,16 @@
         </div>
 
         <a href="./page2.html" id="link-to-album">
-            <button>Ảnh chúng mình</button>
+            <button>our meme</button>
         </a>
 
-        <audio id="myAudio">
-            <source src="./ST.mp3" type="audio/mp3">
-            <source src="./ghemoi.mp3" type="audio/mp3">
+        <audio id="myAudio" controls>
+            <source id="audioSource" src="music/ST.mp3" type="audio/mp3">
             Trình duyệt của bạn không hỗ trợ thẻ audio.
         </audio>
 
         <script>
-            let songs = ["./ST.mp3", "./ghemoi.mp4"]; // Danh sách bài hát
+            let songs = ["music/ghemoi.mp4", "music/bacbling.mp4", "music/ST.mp3" ]; // Danh sách bài hát
             let currentSong = 0;
             let audio = document.getElementById("myAudio");
 
